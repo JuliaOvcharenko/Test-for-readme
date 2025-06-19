@@ -121,44 +121,103 @@ ___
   <summary><strong>
   
   ![](images_for_readme/windows.svg)
-  Для Windows</strong></summary>
+  Для Windows | For Windows</strong></summary>
 
-  - Завантажте та налаштуйте **Python**: Перейдіть на [офіційний сайт Python](https://www.python.org/), знайдіть вкладку ["Downloads"](https://www.python.org/downloads/) і завантажте версію Python відповідно до вашої операційної системи. Під час налаштування обов’язково оберіть опцію "Add python.exe to PATH".
+  - 1️⃣ Завантажте та налаштуйте **Python**: Перейдіть на [офіційний сайт Python](https://www.python.org/), знайдіть вкладку ["Downloads"](https://www.python.org/downloads/) і завантажте версію Python відповідно до вашої операційної системи. Під час налаштування обов’язково оберіть опцію "Add python.exe to PATH".
+  ___
+  - 1️⃣ Download and install **Python**: Go to the [official Python website](https://www.python.org/), open the ["Downloads"](https://www.python.org/downloads/) tab, and download the Python version for your operating system. When installing, make sure to check the box that says "Add python.exe to PATH".
+
+___
   
   - ![](images_for_readme/python.jpg)
+  ___
+
+  - 2️⃣ Завантажте та налаштуйте **Git**: Перейдіть на [офіційний сайт Git](https://git-scm.com/) і завантажте версію Git відповідно до вашої операційної системи.
+
+  ___
+
+  - 2️⃣ Download and install **Git**: Go to the [official Git website](https://git-scm.com/) and download the version of Git for your operating system.
+
+  ___
+
+  - 3️⃣ Завантажте та налаштуйте **Visual Studio Code**: Перейдіть на [офіційний сайт Visual Studio Code](https://code.visualstudio.com/) 
   
-  - Завантажте та налаштуйте **Git**: Перейдіть на [офіційний сайт Git](https://git-scm.com/) і завантажте версію Git відповідно до вашої операційної системи.
-  - Завантажте та налаштуйте **Visual Studio Code**: Перейдіть на [офіційний сайт Visual Studio Code](https://code.visualstudio.com/) 
-  - Відкрийте Visual Studio Code, створіть або відкрийте необхідну папку в якій буде знаходитися проєкт.
-  - Відкрийте термінал, оберіть "Git Bash"
-  - Скопіюйте команду у відкритий термінал:
-    ```sh
-    git clone https://github.com/VashchenkoArtem/social_network.git
-    ```
-  - Створіть віртуальне оточення та активуйте його
+  ___
+
+  - 3️⃣ Download and install Visual Studio Code: Go to the [official Visual Studio Code website](https://code.visualstudio.com/) and download the version for your operating system.
+
+  ___
+
+  - 4️⃣ Відкрийте Visual Studio Code, створіть або відкрийте необхідну папку в якій буде знаходитися проєкт.
+  ___
+
+  - 4️⃣ Open Visual Studio Code, then create or open the folder where your project will be.
   
-    ```sh
-    python -m venv <namevenv>
-    ```
+    - Відкрийте термінал, оберіть "Git Bash"
+  
+    - Скопіюйте команду у відкритий термінал:
+    ___
+    - Open the terminal and choose "Git Bash"
+  
+    - Copy the command into the open terminal:
+  
+      ```sh
+      git clone https://github.com/VashchenkoArtem/social_network.git
+      ```
+    - Створіть віртуальне оточення та активуйте його
+    ___
 
-    ```sh
-    .\<namevenv>\Scripts\activate.bat
-    ```
+    - Create a virtual environment and activate it
 
-  - Встановіть необхідні бібліотеки в віртуальне оточення з файлу requirements.txt
-    
-    ```sh
-    pip install -r requirements.txt
-    ```
-  - Перейдіть у папку social_network, якщо ви не там
+      ```sh
+      python -m venv <namevenv>
+      ```
 
-    ```sh
-    cd social_network
-    ```
+      ```sh
+      .\<namevenv>\Scripts\activate.bat
+      ```
 
-  - Запустіть сервер
-    ```sh
-    python manage.py runserver
-    ```
-  - Вітаємо! Ви локально запустили проєкт!
+    - Встановіть необхідні бібліотеки в віртуальне оточення з файлу requirements.txt
+      
+    ___
+
+    - Install the required libraries into the virtual environment from the requirements.txt file
+
+      ```sh
+      pip install -r requirements.txt
+      ```
+    - Перейдіть у папку social_network, в якій знаходиться файл manage.py якщо ви не там
+
+    ___
+
+    - Go to the folder social_network where the manage.py file is, if you are not there yet
+  
+
+      ```sh
+      cd social_network
+      ```
+
+        ```sh
+      cd social_network
+      ```
+
+    - Проведіть міграції
+    ___
+
+    - Run the migrations
+  
+      ```sh
+      python manage.py migrate
+      ```
+
+    - Запустіть сервер
+    ___
+    - Run the project
+  
+      ```sh
+      python manage.py runserver
+      ```
+  - 5️⃣ Вітаємо! Ви локально запустили проєкт!
+  ___
+  - 5️⃣ Congratulations! You have successfully run the project locally!
 </details>
