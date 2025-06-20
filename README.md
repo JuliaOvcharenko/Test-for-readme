@@ -7,7 +7,7 @@
 - [Структура | Structure of project](#структура--structure-of-the-project)
 - [Функціонал кожного з додатків | Functionality of each application](#функціонал-кожного-з-додатків--functionality-of-each-application)
 - [Як встановити та запустити проєкт? | How to install and run the project?](#як-встановити-та-запустити-проєкт--how-to-install-and-run-the-project)
-- [Висновок | Conclusion](#висновок--conclusion)
+- [Висновок | Conclusion](#📌-висновок--conclusion)
 
   
 ## Мета створення проєкту | Purpose of the Project
