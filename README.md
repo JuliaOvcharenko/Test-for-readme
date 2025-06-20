@@ -117,16 +117,19 @@ ___
 
 ## Як встановити та запустити проєкт? | How to install and run the project?
 
-<details>
-  <summary><strong>
-  
-  ![](images_for_readme/windows.svg)
-  Для Windows | For Windows</strong></summary>
 
 > [!NOTE]
 > Проєкт стабільно працює на Python 3.8 і вище. Для максимальної сумісності та стабільної роботи рекомендуємо використовувати останню доступну версію Python.
 > 
 > The project works well with Python 3.8 or higher. To be sure everything works correctly, we recommend using the latest version of Python.
+
+
+
+<details>
+  <summary><strong>
+  
+  ![](images_for_readme/windows.svg)
+  Для Windows | For Windows</strong></summary>
 
   - 1️⃣ Завантажте та налаштуйте **Python**: Перейдіть на [офіційний сайт Python](https://www.python.org/), знайдіть вкладку ["Downloads"](https://www.python.org/downloads/) і завантажте версію Python відповідно до вашої операційної системи. Під час налаштування обов’язково оберіть опцію "Add python.exe to PATH".
   ___
@@ -236,11 +239,6 @@ ___
   
   ![](images_for_readme/macos.svg)
   Для MacOS | For MacOS</strong></summary>
-
-> [!NOTE]
-> Проєкт стабільно працює на Python 3.8 і вище. Для максимальної сумісності та стабільної роботи рекомендуємо використовувати останню доступну версію Python.
-> 
-> The project works well with Python 3.8 or higher. To be sure everything works correctly, we recommend using the latest version of Python.
 
 
   - 1️⃣ Завантажте та налаштуйте **Python**: Перейдіть на [офіційний сайт Python](https://www.python.org/), знайдіть вкладку ["Downloads"](https://www.python.org/downloads/) і завантажте версію Python відповідно до вашої операційної системи. Під час налаштування обов’язково оберіть опцію "Add python.exe to PATH".
