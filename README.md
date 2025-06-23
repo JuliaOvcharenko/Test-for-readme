@@ -1,5 +1,5 @@
 # Project "Social network - Messanger" | Проєкт "Social network - Messanger" 
-
+.х
 ## Навігація | Navigation on README:
 - [Мета створення проєкту | Purpose of the Project](#мета-створення-проєкту--purpose-of-the-project)
 - [Склад команди | Developers](#склад-команди--team-members--developers)
@@ -395,7 +395,7 @@ ___
   
   - SQLite – Реляційна база даних для локальної роботи.
   
-  - MySQL — Нереляційна база даних для віддаленої роботи.
+  - MySQL — Реляційна база даних для віддаленої роботи.
   
   - Git – Система контролю версій	для відстеження змін у коді.
   
@@ -466,7 +466,7 @@ We worked as a team. To do this, we:
 
   - SQLite – A relational database for local work.
 
-  - MySQL – A non-relational database for remote work.
+  - MySQL – A relational database for remote work.
 
   - Git – A version control system to track changes in the code.
 
