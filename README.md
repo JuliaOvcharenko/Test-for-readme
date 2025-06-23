@@ -59,9 +59,9 @@ ___
   <summary><strong>📁 chats</strong></summary>
 
   ---
-  > 📁 chats – 
+  > 📁 chats – Додаток для чатінгу. У процесі розробки ми працювали з: django channels, web socets, з датами в форматі ico. Додаток корисний тим, що будь-який зареєстрований користувач має змогу створювати та використовувати групові або індивідуальні чати. 
   ---
-  > 📁 chats  – 
+  > 📁 chats  – Application for chating. During the development process we work with: django channels, web socets, and dates in iso-format. The application is useful because everyone can create or user group or individual chats. 
   ---
 </details>
 
@@ -69,9 +69,9 @@ ___
   <summary><strong>📁 friends</strong></summary>
 
   ---
-  > 📁 friends – 
-  ---
-  > 📁 friends  – 
+  > 📁 friends – Сторінка друзів. У процесі розробки якої ми працювали із надсиланням запиту до друзів іншим користувачам, видаленням інших користувачів з друзів, відображенням ваших друзів та рекомендації вам нових друзів, для цього ми користовувалися такими класами відображення як: TemplateView та DeleteView. На якій відображаються користувачі які вжє є вашими друзями або можуть стати вашими друзями якщо ви їх додасте до своїх друзів.
+  --- 
+  > 📁 friends  – Friends page. During the process of development, we worked hard to ask friends to other friends, to other friends from friends, to the images of your friends and recommendations to you of new friends, for whom we used the following display classes: TemplateView and DeleteView. How do they appear to be your friends, or may they become your friends, and you will pass them on to your friends.
   ---
 </details>
 
@@ -79,9 +79,27 @@ ___
   <summary><strong>📁 main</strong></summary>
 
   ---
-  > 📁 main – 
+  > 📁 main – Головна сторінка проєкта  
+    Це веб-застосунок із функціоналом створення, редагування та перегляду постів, з можливістю додавати зображення вручно (з комп’ютера локалько) чи за допомогою URL-адресою. Застосунок має сучасний інтерфейс із модальними формами, що зручно відкриваються/закриваються без перезавантаження сторінки. 
+    * Основні можливості:
+    - створювати публікації через інтерактивну форму;
+    - переглядати вміст окремих блоків за допомогою кнопок «три крапки»;
+    - редагувати вже створені пости: зʼявляється форма, яка автоматично підтягує дані через AJAX;
+    - додавати зображення напряму з компʼютера або через поле введення URL-адрес.
+    Під час відкриття модальних вікон основний контент затемнюється (ефект blur) для зручності користувача. Усі взаємодії та зміни в HTML-документі здійснюються за допомогою JavaScript, що дозволяє створювати зручний, динамічний і плавний інтерфейс користувача.
+
   ---
-  > 📁 main  – 
+  > 📁 main  –  Project Main Page
+  This is a web application with functionality for creating, editing, and viewing posts, allowing users to add images either manually (from a local computer) or via a URL. The app features a modern interface with modal forms that open and close smoothly without reloading the page.
+  * Key features:
+  - Create posts through an interactive form;
+ - View content of individual blocks using the “three dots” buttons;
+
+-Edit existing posts: a form appears that automatically loads data via AJAX;
+
+-Add images directly from the computer or by entering a URL.
+
+  When modal windows open, the main content is blurred for better user focus. All interactions and updates within the HTML document are handled using JavaScript, enabling a smooth, dynamic, and user-friendly interface.
   ---
 </details>
 
@@ -89,7 +107,7 @@ ___
   <summary><strong>📁 publications</strong></summary>
 
   ---
-  > 📁 publications – 
+  > 📁 publications – Додаток для відображення та створення особистих постів користувача. На ньому ми працювали зі створенням посту, його редагуванням та видаленням. Використовували такі класи відображення, як: DeleteView, UpdateView, CreateView, LogoutView.
   ---
   > 📁 publications  – 
   ---
@@ -99,8 +117,11 @@ ___
   <summary><strong>📁 registration</strong></summary>
 
   ---
-  > 📁 registration – 
+  > 📁 registration – Сторінка реєстрації,яка дозволяє новим користувачам створити обліковий запис для доступу до функціоналу застосунку
   ---
+  основний функціонал - Введення данних користувача:Пошта,пароль,підтвердження паролю
+  ---
+  
   > 📁 registration  – 
   ---
 </details>
@@ -109,9 +130,9 @@ ___
   <summary><strong>📁 settings_app</strong></summary>
 
   ---
-  > 📁 settings_app – 
+  > 📁 settings_app – Додаток для налаштувань профілю користувача та для створення альбомів. 
   ---
-  > 📁 settings_app  – 
+  > 📁 settings_app  – Application for user profile settings and for creating albums
   ---
 </details>
 
