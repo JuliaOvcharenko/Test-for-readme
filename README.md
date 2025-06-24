@@ -6,6 +6,7 @@
 - [Посилання | Links](#посилання--links)
 - [Структура | Structure of project](#структура--structure-of-the-project)
 - [Функціонал кожного з додатків | Functionality of each application](#функціонал-кожного-з-додатків--functionality-of-each-application)
+- [Особливості кожного з додатків з прикладом коду | Features of Each App with Code Example]()
 - [Як встановити та запустити проєкт? | How to install and run the project?](#як-встановити-та-запустити-проєкт--how-to-install-and-run-the-project)
 - [Висновок | Conclusion](#висновок--conclusion)
 
@@ -163,6 +164,28 @@ ___
   ---
 </details>
 
+
+## Особливості функціоналу кожного з додатків з прикладом коду | Features of Each App with Code Example
+
+<details>
+  <summary><strong>📁 chats</strong></summary>
+
+  ---
+  - Файл social_network/chats/consumers.py
+  
+  ```python
+
+  ```
+
+
+
+  ---
+  > 📁 chats  – Application for chating. During the development process we work with: django channels, web socets, and dates in iso-format. The application is useful because everyone can create or user group or individual chats. 
+  ---
+</details>
+
+
+
 ## Як встановити та запустити проєкт? | How to install and run the project?
 
 
@@ -245,6 +268,16 @@ ___
       ```sh
       pip install -r requirements.txt
       ```
+      
+    - Завантажте channels та daphne для роботи з Django Channels
+    ___
+
+    - Install Channels and Daphne for Django Channels
+
+      ```sh
+      pip install channels, daphne
+      ```
+    
     - Перейдіть у папку social_network, в якій знаходиться файл manage.py якщо ви не там
 
     ___
@@ -355,6 +388,16 @@ ___
       ```sh
       pip install -r requirements.txt
       ```
+
+    - Завантажте channels та daphne для роботи з Django Channels
+    ___
+
+    - Install Channels and Daphne for Django Channels
+
+      ```sh
+      pip install channels, daphne
+      ```
+    
     - Перейдіть у папку social_network, в якій знаходиться файл manage.py якщо ви не там
 
     ___
