@@ -1,5 +1,5 @@
 # Project "Social network - Messanger" | Проєкт "Social network - Messanger" 
-.х
+
 ## Навігація | Navigation on README:
 - [Мета створення проєкту | Purpose of the Project](#мета-створення-проєкту--purpose-of-the-project)
 - [Склад команди | Developers](#склад-команди--team-members--developers)
