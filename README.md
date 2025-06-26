@@ -2,11 +2,11 @@
 
 ## Навігація | Navigation on README:
 - [Мета створення проєкту | Purpose of the Project](#мета-створення-проєкту--purpose-of-the-project)
-- [Склад команди | Developers](#склад-команди--team-members--developers)
+- [Склад команди | Team members | Developers](#склад-команди--team-members--developers)
 - [Посилання | Links](#посилання--links)
-- [Структура | Structure of project](#структура--structure-of-the-project)
+- [Структура | Structure of the project](#структура--structure-of-the-project)
 - [Функціонал кожного з додатків | Functionality of each application](#функціонал-кожного-з-додатків--functionality-of-each-application)
-- [Особливості кожного з додатків з прикладом коду | Features of Each App with Code Example](#особливості-функціоналу-кожного-з-додатків-з-прикладом-коду--features-of-each-app-with-code-example)
+- [Особливості функціоналу кожного з додатків з прикладом коду | Features of Each App with Code Example](#особливості-функціоналу-кожного-з-додатків-з-прикладом-коду--features-of-each-app-with-code-example)
 - [Як встановити та запустити проєкт? | How to install and run the project?](#як-встановити-та-запустити-проєкт--how-to-install-and-run-the-project)
 - [Висновок | Conclusion](#висновок--conclusion)
 
@@ -278,7 +278,7 @@ ___
       path("chats/all_chats/<int:chat_pk>", ChatConsumer.as_asgi(), name="chat") # Створємо шлях для chats, вказуючи ChatConsumer як асинхронний обробник для WebSocket запиту.
   ]
 ```
-    ___
+  ___
 
   - Файл social_network/social_network/asgi.py
     - asgi.py - файл для використання у проєкті асинхронності.
@@ -306,6 +306,9 @@ ___
         'websocket': AuthMiddlewareStack(URLRouter(ws_urlpatterns)) 
     })
 ```
+  ___
+
+
   - Файл social_network/chats/static/js/chat.js
     - chat.js - файл для взаємодії клієнта з сервером за протоколом WS.
 
@@ -363,12 +366,30 @@ ___
 
 <details>
   <summary><strong>📁 publications</strong></summary>
-
-  ---
-   
-  ---
   
-  ---
+  ___
+
+  - Файл social_network/publications/views.py
+    - views.py - файл для логіки додатку.
+```python
+  from django.contrib.auth.models import User # Імпортуємо модель User
+  pubs/views
+```
+
+  ___
+
+
+  - Файл social_network/publications/models.py
+    - models.py - У файлі models.py ми визначаємо всі об'єкти, що називаються моделі - Models. Вона містить основні поля та поведінку даних, які ви зберігаєте.
+  
+```python
+  from django.contrib.auth.models import User # Імпортуємо модель User
+  pubs/models
+```
+
+  ___
+
+
 </details>
 
 
@@ -477,25 +498,104 @@ ___
                 return self.form_invalid(form) # Форма не валідна.
   ```
   ---
-  - Файл social_network/registration/backends.py
-    - backends.py - файл для .
-  
-  ___
 
-    ```python 
-
-    ```
-
-  ___
   - Файл social_network/registration/forms.py
     - forms.py - файл для створення кастомних валідованих форм django.
   ___
 
-    ```python 
+  ```python 
+      from django import forms # Імпортуємо модуль forms з django
+      from django.contrib.auth.forms import UserCreationForm, AuthenticationForm # Імпортужмо UserCreationForm та AuthenticationForm з django.contrib.auth.forms
+      from django.contrib.auth.models import User # Імпортуємо модель User з django.contrib.auth.models
+      from settings_app.models import Profile # Імпортуємо модель Profile з settings_app.models
 
-    ```
+
+      # Створюємо форму для реєстрації, яка наслідує UserCreationForm для створення нового користувача
+      class RegistrationForm(UserCreationForm):
+          # Додаємо поле для введення електронної пошти
+          email = forms.EmailField(max_length = 256,label = "Електронна пошта", widget = forms.EmailInput(attrs = {
+                                                                              "placeholder": "you@example.com"
+                                                                                    })) #
+          # Додаємо поле для введення імені користувача
+          password1 = forms.CharField(max_length= 12,label = "Пароль", widget = forms.PasswordInput(attrs = {
+                                                                              "placeholder": "Введи пароль"
+                                                                                      })) #
+          # Додаємо поле для підтвердження пароля
+          password2 = forms.CharField(max_length= 12,label = "Підтвердити", widget = forms.PasswordInput(attrs = {
+                                                                              "placeholder": "Повтори пароль"
+                                                                                      })) #
+          # Створюємо мета-клас для вказання моделі та полів, які будуть використовуватись у формі
+          class Meta:
+              model = User # Вказуємо модель, з якою працюватиме форма
+              fields = ["email"] # Вказуємо поля, які будуть включені у форму
+              
+      # Створюємо форму для авторизації, яка наслідує AuthenticationForm для входу користувача
+      class AuthorithationForm(forms.Form):
+          # Додаємо поле для введення імені користувача або електронної пошти
+          email = forms.EmailField(max_length= 256,label = "Пошта", widget=forms.EmailInput(attrs ={
+              "placeholder": "you@example.com" #
+          })) 
+          # Додаємо поле для введення пароля
+          password = forms.CharField(widget = forms.PasswordInput(attrs = {
+              "placeholder": "Введи пароль" #
+          }), label = "Пароль") #
+
+
+      # Створюємо форму для верифікації, яка наслідує forms.Form для збору шести полів вводу
+      class VerificationForm(forms.Form):
+          
+          # Додаємо поле вводу 1 для верифікації
+          input1 = forms.CharField(label = "", widget=forms.TextInput(attrs = { 
+              "class": "input1 input", #
+              "inputmode": "numeric" #
+          })) 
+          # Додаємо поле вводу 2 для верифікації
+          input2 = forms.CharField(label = "", widget=forms.TextInput(attrs = { #
+              "class": "input2 input" #
+          })) 
+          # Додаємо поле вводу 3 для верифікації
+          input3 = forms.CharField(label = "", widget=forms.TextInput(attrs = { # 
+              "class": "input3 input" #
+          }))
+          # Додаємо поле вводу 4 для верифікації
+          input4 = forms.CharField(label = "", widget=forms.TextInput(attrs = { #
+              "class": "input4 input" #
+          })) 
+          
+          # Додаємо поле вводу 5 для верифікації
+          input5 = forms.CharField(label = "", widget=forms.TextInput(attrs = { #
+              "class": "input5 input" # 
+          })) 
+          
+          # Додаємо поле вводу 6 для верифікації
+          input6 = forms.CharField(label = "", widget=forms.TextInput(attrs = { #
+              "class": "input6 input" #
+          })) 
+          
+          
+  ```
   ___
-  
+
+  - Файл social_network/registration/backends.py
+    - backends.py - файл для зміни логіки реєстрації та аутентифікації з "ім'я - пошта - пароль" на "пошта - пароль".
+```python
+  from django.contrib.auth.models import User # Імпортуємо модель User
+  from django.contrib.auth.backends import ModelBackend # Імпортуємо звичайні налаштування backend
+
+  # Створюємо клас особливого налаштування backend
+  class LoginEmail(ModelBackend):
+      # Перестворюємо функцію authenticate
+      def authenticate(self, request, username = None, password = None, **kwargs):
+          try: # Створюємо оператор try-except
+              user = User.objects.get(email=username) # Знаходимо користувача не по ім'ю, а по пошті
+              if user.check_password(password): # Перевіряємо пароль
+                  return user # Повертаємо користувача 
+          except User.DoesNotExist: # Якщо юзер не знайдений 
+              return None # Повертаємо None
+```
+
+  ___
+
 </details>
 
 
