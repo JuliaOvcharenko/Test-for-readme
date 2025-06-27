@@ -1158,11 +1158,51 @@ ___
 <details>
   <summary><strong>📁 settings_app</strong></summary>
 
-  ---
-   
-  ---
+  ___
+  - Файл social_network/settings_app/models.py
+    - models.py -  У файлі models.py ми визначаємо всі об'єкти, що називаються моделі - Models. Вона містить основні поля та поведінку даних, які ви зберігаєте.
+```python
+  from django.db import models # Імпортуємо models для роботи з моделями
+  from django.contrib.auth.models import User # Імпортуємо модель користувача
+  from django.contrib.auth import get_user_model # Імпортуємо функцію для отримання користувача
+  from django.conf import settings # Імпортуємо налаштування проекту
+
+  # Створюємо модель профілю користувача, яка розширює модель User та міститиме додаткову інформацію - дату народження та підпис.
+  class Profile(models.Model):
+      user = models.OneToOneField(User, on_delete=models.CASCADE)
+      date_of_birth = models.DateField(null = True)   
+      signature = models.ImageField(upload_to="images/signatures", blank = True, null = True)
+
+      def __str__(self):
+          return self.user.username
+
+  # Створюємо модель аватара користувача яка містититьв собі зображення аватара, пов'язане з профілем користувача, активність/прихованість його аватарок.
+  class Avatar(models.Model):
+      image = models.ImageField(upload_to = "images/avatars")
+      profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+      active = models.BooleanField(default = True)
+      shown = models.BooleanField(default = True)
+      def __str__(self):
+          return f'Аватар для профілю {self.profile}'
+
+  # Створюємо модель дружби, яка міститиме інформацію про профілі користувачів, які стали друзями, та статус дружби (прийнято чи ні).
+  class Friendship(models.Model):
+      profile1 = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="friendship_sent_request") # Той, хто надсилає запит
+      profile2 = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="friendship_accepted_request") # Той, хто приймає запит
+      accepted = models.BooleanField(default=False)
+
+      def __str__(self):
+          return f'Дружба між {self.profile1} та {self.profile2}'
+
+  # Створюємо модель VerificationCode, яка міститиме інформацію про код підтвердження, пов'язаний з користувачем, та дату його створення.
+  class VerificationCode(models.Model):
+      username = models.CharField(max_length=150)
+      code = models.CharField(max_length=255)
+      created_at = models.DateTimeField(auto_now_add=True)
+
+```
+___
   
-  ---
 </details>
 
 
